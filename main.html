@@ -9,8 +9,40 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			let max= arr[0];
+			let maxIndex = 0;
+			var smax=Number.MIN_VALUE;
+			var smindex=-1;
+			let arr_len = arr.length;
 			
+			if(arr_len==1)
+				return '-Infinity';
+				
+			if(true){
+				let firstElement = arr[0];
+				let count=0;
+				for(let i in arr){
+					if(arr[i]==firstElement)
+						count++;
+					if(arr[i]>max){
+						max = arr[i];
+						maxIndex = i;
+					}
+				}
+				if(count==arr_len)
+					return '-Infinity';
+			}
+
+
+
+			
+			for(let i in arr){
+			    if(arr[i]>smax && i!=maxIndex){
+					    smax = arr[i];
+					    smindex = i;
+					}
+			}
+			return smax;	
 		}
 
 		function Main() {
