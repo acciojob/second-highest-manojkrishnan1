@@ -11,12 +11,12 @@
 		function secondHighest(arr) {
 			let max= arr[0];
 			let maxIndex = 0;
-			var smax=Number.MIN_VALUE;
+			var smax=Number.NEGATIVE_INFINITY;
 			var smindex=-1;
 			let arr_len = arr.length;
 			
 			if(arr_len==1)
-				return '-Infinity';
+				return -Infinity;
 				
 			if(true){
 				let firstElement = arr[0];
@@ -30,7 +30,7 @@
 					}
 				}
 				if(count==arr_len)
-					return '-Infinity';
+					return -Infinity;
 			}
 
 
